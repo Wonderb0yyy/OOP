@@ -4,15 +4,17 @@ class Counter:
     def __init__(self):
         Counter.count += 1
 
-    @classmethod
-    def how_many(cls):
-        print(f"Liczba utworzonych obiektów: {cls.count}")
+    def how_many(self):
+        print(f"Liczba utworzonych obiektów: {Counter.count}")
+
 
 # Test działania
 if __name__ == "__main__":
-    Counter.how_many()
     c1 = Counter()
+    c1.how_many()
+
     c2 = Counter()
-    Counter.how_many()
+    c2.how_many()
+
     c3 = Counter()
-    Counter.how_many()
+    c3.how_many()
